@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ankit Kumar Gurjar — Cyber Security Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #000;
+      --neon: #00ff6a;
+      --muted: #7ef7b0;
+      --accent: rgba(0,255,106,0.08);
+      --glass: rgba(255,255,255,0.02);
+      --radius: 12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--neon);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 24px;
+    }
+
+    /* Terminal top bar */
+    .terminal{
+      width:100%;
+      max-width:1100px;
+      border-top:3px solid var(--neon);
+      padding-top:18px;
+    }
+    .topline{
+      font-family: 'Orbitron', monospace;
+      font-size:14px;
+      color:var(--neon);
+      padding:6px 12px;
+    }
+    .topline span.prompt{color:var(--muted);}
+
+    /* Main card */
+    .card{
+      margin-top:28px;
+      background:transparent;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      padding:36px 20px 64px 20px;
+    }
+
+    /* Profile circle */
+    .avatar{
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      padding:6px;
+      background:linear-gradient(180deg, rgba(0,255,106,0.12), rgba(0,255,106,0.06));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 6px 30px rgba(0,255,106,0.04), inset 0 0 0 2px rgba(0,255,106,0.14);
+      transition:transform .35s ease;
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:50%;
+      display:block;
+      border:4px solid rgba(0,0,0,0.45);
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.25);
+    }
+    .avatar:hover{transform:translateY(-6px) scale(1.02)}
+
+    h1{
+      margin:0;
+      font-family: 'Orbitron', monospace;
+      font-size:44px;
+      letter-spacing:4px;
+      color:var(--neon);
+      text-shadow: 0 0 18px rgba(0,255,106,0.08);
+    }
+    p.tagline{
+      margin:0;
+      color:var(--muted);
+      letter-spacing:1.2px;
+      font-size:14px;
+    }
+
+    /* Buttons */
+    .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+    .btn{
+      background:transparent;
+      border:1.5px solid rgba(0,255,106,0.22);
+      color:var(--neon);
+      padding:10px 18px;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+      text-decoration:none;
+      transition:all .18s ease;
+      font-size:14px;
+      backdrop-filter: blur(4px);
+    }
+    .btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 30px rgba(0,255,106,0.06), inset 0 0 12px rgba(0,255,106,0.02);
+      border-color:var(--neon);
+    }
+
+    /* About panel */
+    .about{
+      margin-top:26px;
+      max-width:880px;
+      text-align:center;
+      color: #90f7b9;
+      font-size:15px;
+      line-height:1.6;
+      padding:18px 26px;
+      border-radius:10px;
+    }
+
+    /* Footer small */
+    .small{font-size:12px;color:rgba(0,255,106,0.38);margin-top:20px}
+
+    /* Responsiveness */
+    @media (max-width:640px){
+      h1{font-size:28px}
+      .avatar{width:140px;height:140px}
+      .card{padding:24px}
+    }
+
+    /* Decorative neon outline on left/right */
+    .neon-left, .neon-right{
+      position:fixed;top:0;bottom:0;width:4px;background:linear-gradient(180deg, rgba(0,255,106,0.06), rgba(0,255,106,0.02));
+      box-shadow:0 0 28px rgba(0,255,106,0.02);
+      pointer-events:none;
+    }
+    .neon-left{left:0}
+    .neon-right{right:0}
+
+  </style>
+</head>
+<body>
+  <div class="neon-left"></div>
+  <div class="neon-right"></div>
+
+  <div class="terminal" role="main">
+    <div class="topline"><span class="prompt">Pradeep@Home#</span></div>
+
+    <div class="card">
+      <!-- Replace `images/profile.jpg` with your real image path or an external URL -->
+      <div class="avatar" aria-hidden="true">
+        <img src="images/profile.jpg" alt="Ankit Kumar Gurjar">
+      </div>
+
+      <h1>Ankit Kumar Gurjar</h1>
+      <p class="tagline">Cyber Security Student | SOC &amp; Cloud Security Enthusiast</p>
+
+      <div class="actions">
+        <a class="btn" href="#about">About Me</a>
+        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:your-email@example.com">Email Me</a>
+      </div>
+
+      <div id="about" class="about">
+        <strong style="display:block;margin-bottom:8px;">About Me</strong>
+        I'm a passionate Cyber Security student currently learning SOC operations, cloud security and defensive tooling. I build small projects (honeypots, log pipelines), practice threat hunting and follow a hands-on approach to learn blue-team techniques. This portfolio highlights projects, resume and contact links.
+      </div>
+
+      <div class="small">Designed with a terminal / hacker-style aesthetic • Replace placeholder links & image in the code</div>
+    </div>
+  </div>
+
+  <script>
+    // small enhancement: fallback avatar if image missing
+    (function(){
+      document.querySelectorAll('.avatar img').forEach(img=>{
+        img.onerror = function(){
+          this.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?><svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='#0b0b0b'/><text x='50%' y='50%' fill='white' font-size='36' font-family='Orbitron, monospace' text-anchor='middle' alignment-baseline='middle'>Ankit</text></svg>`);
+        }
+      })
+    })();
+  </script>
+</body>
+</html>
